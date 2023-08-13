@@ -1,0 +1,132 @@
+<h1 id="KUC"><a href="KUC" style="text-decoration: none; color:black"> Kendo UI Core </a> </h1>
+<br>
+<h2 id="AKUC"><a href="AKUC" style="text-decoration: none; color:black">About Kendo UI Core </a> </h2>
+Kendo UI is everything you need to build sites and apps with HTML5 &amp; JavaScript. Kendo UI Core is the free and open-source version of Kendo UI that provides access to the web's best UI widgets and key framework features, essential for developing great experiences for the web and mobile.
+<br>
+<h2 id="FOK"><a href="FOK" style="text-decoration: none; color:black">Features of Kendo UI Core </a> </h2>
+Kendo UI Core is a free and open-source subset of Kendo UI. The following table details the widgets and features available in Kendo UI Core, as well as the additional features available via a commercial Kendo UI license.
+<br>
+<h2 id="CAR"><a href="CAR" style="text-decoration: none; color:black">Compatibility and Requirements</a> </h2>
+Kendo UI Core depends on the following libraries:
+<br>
+<ul>
+<li><a href="http://www.jquery.com/">jQuery</a> v1.9.1+</li>
+</ul>
+<p>Kendo UI Core has not been tested against any other versions of these libraries. You may find that versions other than these are compatible with Kendo UI Core. However, we make no claims to support those versions, and will not troubleshoot issues that arise when using those versions.
+<br></p>
+<h2 id="BKUC"><a href="BKUC" style="text-decoration: none; color:black">Building Kendo UI Core</a> </h2>
+<br>
+<p>There are two ways to get the source code for Kendo UI Core. You can either download a pre-built zip from <a href="https://www.telerik.com/kendo-ui/open-source-core">telerik.com</a> , or build the source yourself using Gulp. The latter approach includes a option for building a distribution of Kendo UI Core that includes only the widgets and framework features required by your app.
+<br></p>
+<h3 id="ID"><a href="ID" style="text-decoration: none; color:black">Installing Dependencies</a> </h3> 
+<p><br>
+In order to build Kendo UI Core, you need to have <strong>Node.js 14.x</strong> and <strong>git 2.x.</strong></p>
+<p>For Windows you have to download and install <a href="https://git-for-windows.github.io/">Git for Windows</a> and <a href="http://nodejs.org/download/">Node.js</a> and <a href="http://landinghub.visualstudio.com/visual-cpp-build-tools">Visual C++ Build Tools</a>.</p>
+<p>Mac OS users should install <a href="http://mxcl.github.com/homebrew/">Homebrew</a>. Once Homebrew is installed, run <code>brew install git</code> to install git, and <code>brew install node@14</code> to install Node.js.</p>
+<p>Linux users can use the <a href="https://github.com/nodesource/distributions">distributions provided by NodeSource</a> or their package managers to install <code>git</code> and <code>nodejs</code>
+<br></p>
+<h3 id="HTB"><a href="HTB" style="text-decoration: none; color:black">How to build Kendo UI Core
+</a> </h3>
+<br>
+Clone a copy of the repository by running
+<pre><code>git clone https://github.com/telerik/kendo-ui-core.git git clone https://github.com/telerik/kendo-ui-core.git
+</code></pre>
+<p>Enter the repository directory</p>
+<pre><code>cd kendo-ui-core
+</code></pre>
+<p>Initialize the submodule repository</p>
+<pre><code class="language-">git submodule update --init
+</code></pre>
+<p>Run the build script:</p>
+<pre><code>npm run build
+</code></pre>
+<p>The minified version of the scripts and styles of Kendo UI Core will be put in the <code>dist/</code> subdirectory.</p>
+<p>There are several other tasks available:</p>
+<pre><code>npx gulp --tasks
+</code></pre>
+<h3 id="BOWY"><a href="BOWY" style="text-decoration: none; color:black">Building only what you need
+</a> </h3>
+<br>
+<p>The npm script <code>npm run scripts:modules</code> will create two folders (<code>cjs</code> and <code>esm</code>) in the dist folder, which includes the bundled modules.</p>
+<h3 id="dev"><a href="dev" style="text-decoration: none; color:black">Development
+</a> </h3>
+<br>
+<ul>
+<li>
+<p>Run the dev script in order to compile both modules and js files in <code>dist/dev</code> and <code>dist/mjs</code> folder</p>
+<p><code>npm run scripts:dev</code> or <code>npm run scripts:dev -- -w</code></p>
+</li>
+<li>
+<p>Run the tests by running <code>npx gulp tests</code></p>
+</li>
+</ul>
+<h2 id="sca"><a href="sca" style="text-decoration: none; color:black">Source Code and Downloads
+</a> </h2>
+<br>
+<p>If you want to skip building Kendo UI Core yourself, head on over to <a href="http://www.telerik.com/kendo-ui/open-source-core">Telerik.com</a> to grab the full source.</p>
+<h2 id="uku"><a href="uku" style="text-decoration: none; color:black">Using Kendo UI Core via the Kendo Static CDN
+</a> </h2>
+<br>
+<p>You can also easily include Kendo UI Core in your site or application by using the Kendo CDN:</p>
+<pre><code>&lt;link href="http://kendo.cdn.telerik.com/2014.2.716/styles/kendo.common.min.css" rel="stylesheet" /&gt;
+&lt;link href="http://kendo.cdn.telerik.com/2014.2.716/styles/kendo.default.min.css" rel="stylesheet" /&gt;
+&lt;script src="http://kendo.cdn.telerik.com/2014.2.716/js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="http://kendo.cdn.telerik.com/2014.2.716/js/kendo.ui.core.min.js"&gt;&lt;/script&gt;&lt;link href="http://kendo.cdn.telerik.com/2014.2.716/styles/kendo.common.min.css" rel="stylesheet" /&gt;
+&lt;link href="http://kendo.cdn.telerik.com/2014.2.716/styles/kendo.default.min.css" rel="stylesheet" /&gt;
+&lt;script src="http://kendo.cdn.telerik.com/2014.2.716/js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="http://kendo.cdn.telerik.com/2014.2.716/js/kendo.ui.core.min.js"&gt;&lt;/script&gt;
+</code></pre>
+<p>The main advantage of the CDN approach is that your users may be able to leverage a primed cache version of Kendo UI Core if they've visited other sites using the framework.</p>
+<h2 id="dok"><a href="dok" style="text-decoration: none; color:black">Documentation
+</a> </h2>
+<br>
+<p>For complete Kendo UI Documentation, including Kendo UI Core, please visit <a href="https://docs.telerik.com/kendo-ui">https://docs.telerik.com/kendo-ui</a>.</p>
+<h2 id="htc"><a href="htc" style="text-decoration: none; color:black">How to Contribute
+</a> </h2>
+<br>
+<p>Kendo UI Core is free and open-source. We encourage and support an active, healthy community that accepts contributions from the public. We'd like you to be a part of that community.</p>
+<p>Before contributing to Kendo UI Core, please:</p>
+<ol>
+<li>Read and sign the <a href="https://www.telerik.com/kendo-ui/cla">Kendo UI Core Contribution License Agreement</a>, to confirm you've read and acknowledged the legal aspects of your contributions, and</li>
+<li>Read our <a href="https://github.com/telerik/kendo-ui-core/blob/master/CONTRIBUTING.md">contribution guide</a>, which houses all of the necessary info to:</li>
+</ol>
+<ul>
+<li>submit bugs,</li>
+<li>request new features, and</li>
+<li>walk you through the entire process of preparing your code for a Pull Request.</li>
+</ul>
+<h2 id="htc"><a href="htc" style="text-decoration: none; color:black">Getting Help
+</a> </h2>
+<br>
+<ul>
+<li>
+<p>Use the <a href="https://github.com/telerik/kendo-ui-core/issues">issues list</a> of this repo for bug reports, related both to Kendo UI Core and Kendo UI Professional</p>
+</li>
+<li>
+<p>Get help on <a href="http://stackoverflow.com/questions/tagged/kendo-ui">Stack Overflow</a> or the <a href="https://www.telerik.com/forums/kendo-ui-framework">Kendo UI Premium Forums</a></p>
+</li>
+<li>
+<p>File feature requests on <a href="https://feedback.telerik.com/kendo-jquery-ui">User Voice</a>
+As a fully-open source project, Kendo UI Core is a primarily community-supported project, As such, you are encouraged to use forums like Stack Overflow to post questions, and the issues list of this repo to report bugs.</p>
+</li>
+</ul>
+<p>The Kendo UI team does not provide formal support for Kendo UI Core, except to those customers who have purchased a <a href="https://www.telerik.com/kendo-ui">commercial license for Kendo UI</a> (Professional, UI for MVC, etc.) or a support-only package from Telerik.com. Please do not create support requests for this project in the issues list for this repo, as these will be immediately closed. You'll be directed to post your question on a community forum.</p>
+<h2 id="rn"><a href="rn" style="text-decoration: none; color:black">Release Notes
+</a> </h2>
+<br>
+<p>For change logs and release notes, see the <a href="https://www.telerik.com/support/whats-new/kendo-ui/release-history">online release notes at Telerik.com</a>.</p>
+<h2 id="li"><a href="li" style="text-decoration: none; color:black">License Information
+</a> </h2>
+<br>
+<p>This project has been released under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License, version 2.0</a>, the text of which is included below. This license applies ONLY to the source of this repository and does not extend to any other Kendo UI distribution or variant, or any other 3rd party libraries used in a repository. For licensing information about Kendo UI, see the <a href="https://www.telerik.com/purchase/license-agreement/kendo-ui">License Agreements page</a> at <a href="https://www.telerik.com/">Telerik.com</a>.</p>
+<blockquote>
+<p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at</p>
+</blockquote>
+<blockquote>
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+</blockquote>
+<blockquote>
+<p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
+</blockquote>
+<p><em>Copyright © 2023 Progress Software Corporation and/or its subsidiaries or affiliates. All Rights Reserved.</em></p>
+<p><em>Progress, Telerik, and certain product names used herein are trademarks or registered trademarks of Progress Software Corporation and/or one of its subsidiaries or affiliates in the U.S. and/or other countries.</em></p>
